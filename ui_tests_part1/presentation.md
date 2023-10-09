@@ -403,28 +403,65 @@ Type of mocks
 ![w:900 center](images/call-1.svg)
 
 ---
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Testing with remote server (Mocks)
 
+|Pros|Cons|
+|---|---|
+|:white_check_mark: Testing whole HTTP stack|:x: Extra time for request-response processing|
+|:white_check_mark: Single remote instance |:x: Required redeploy in case of mock updates |
+
+
+---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Entry level)
-
 
 ![w:900 center](images/call-2.svg)
 
 ---
 
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Entry level)
+
+|Pros|Cons|
+|---|---|
+|:white_check_mark: Easy to implement|:x: HTTP Stack not tested|
+|:white_check_mark: Fast responses |:x: Not shared between platforms|
+|:white_check_mark: Static mock going as part of application ||
+
+
+---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Intermediate)
 
-
-
 ![w:900 center](images/call-3.svg)
 
+---
+
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Intermediate)
+
+|Pros|Cons|
+|---|---|
+|:white_check_mark: Required extra affort to implement |:x: HTTP Stack still not tested|
+|:white_check_mark: Fast responses |:x: Code still not shared between platforms|
+|:white_check_mark: Each test having custom mocks ||
+|:white_check_mark: Custom Rules!!! ||
 ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Advanced)
 
 
 ![w:900 center](images/call-4.svg)
+
+---
+
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Advanced)
+
+|Pros|Cons|
+|---|---|
+|:white_check_mark: HTTP Stack still not tested ||
+|:white_check_mark: Code still not shared between platform ||
+|:white_check_mark: Required extra affort to implement |:x: HTTP Stack still not tested|
+|:white_check_mark: Fast responses |:x: Code still not shared between platforms|
+|:white_check_mark: Each test having custom mocks ||
 
 ---
 
