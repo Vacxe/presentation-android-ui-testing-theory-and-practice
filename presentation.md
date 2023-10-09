@@ -370,7 +370,7 @@ onScreen<FeatureAScreen> {
 
 <!-- _class: lead -->
 
-![1 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
+![2 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
 
 # Mocks
 
@@ -474,16 +474,25 @@ onScreen<FeatureAScreen> {
 
 ---
 
+# Agenda for today
+
+- ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Dive into UI testing 
+- ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Native Android UI Testing
+- ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Mocks
+- ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
+
+---
+
 <!-- _class: lead -->
 
-![1 w:256 h:256](https://icongr.am/material/numeric-4-circle.svg?color=ff9900)
+![4 w:256 h:256](https://icongr.am/material/numeric-4-circle.svg?color=ff9900)
 
 # Conclusion
 
 ---
 
 
-# ![3](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
+# ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
 
 * Always undestand what you want to test
 * Choose a right tooling set
