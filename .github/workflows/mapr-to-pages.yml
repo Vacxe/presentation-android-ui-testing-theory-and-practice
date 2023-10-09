@@ -19,15 +19,12 @@ jobs:
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 
 
-      - name: Ensure build dir exists
-        run: mkdir -p build
-
-      - name: Marp Build (UI Test Part 1)
+      - name: Marp Build
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: ui_tests_part1/presentation.md -o ui_tests_part1/index.html
+          args: presentation.md -o index.html
         env:
           MARP_USER: root:root
 
