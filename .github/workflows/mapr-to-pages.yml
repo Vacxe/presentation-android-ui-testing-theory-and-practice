@@ -1,0 +1,38 @@
+name: marp-to-pages
+concurrency: marp-to-pages
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Ensure build dir exists
+        run: mkdir -p build
+
+      - name: Marp Build (UI Test Part 1)
+        uses: docker://marpteam/marp-cli:v3.0.2
+        with:
+          args: ui_tests_part1/presentation.md -o ui_tests_part1/index.html
+        env:
+          MARP_USER: root:root
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
