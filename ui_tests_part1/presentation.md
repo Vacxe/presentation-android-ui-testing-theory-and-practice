@@ -126,6 +126,8 @@ Software testing pyramid
 - ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Mocks
 - ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
 
+---
+
 <!-- _class: lead -->
 
 ![1 w:256 h:256](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
@@ -388,13 +390,22 @@ onScreen<FeatureAScreen> {
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Mocks
 
-Type of mocks
 * Deployment
   * Local
   * Remote
 * Type
   * Stateless
   * Stateful
+---
+
+# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Testing with remote Prod server
+
+|Pros|Cons|
+|---|---|
+|:white_check_mark: Testing whole HTTP stack|:x: Extra time for request-response processing|
+|:white_check_mark: Good for Integration testing|:x: Bad for Feature testing|
+||:x: Stateful|
+||:x: Unstable results and branching in tests logic|
 
 ---
 
@@ -402,13 +413,16 @@ Type of mocks
 
 ![w:900 center](images/call-1.svg)
 
+
 ---
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Testing with remote server (Mocks)
 
 |Pros|Cons|
 |---|---|
 |:white_check_mark: Testing whole HTTP stack|:x: Extra time for request-response processing|
-|:white_check_mark: Single remote instance |:x: Required redeploy in case of mock updates |
+|:white_check_mark: Single remote instance |:x: Required redeploy in case of mock updates|
+|:white_check_mark: Stable results for UI testing |:x: Required redeploy in case of mock updates|
+|:white_check_mark: Stateless |:x: Not supporting custom error codes|
 
 
 ---
@@ -426,24 +440,17 @@ Type of mocks
 |:white_check_mark: Easy to implement|:x: HTTP Stack not tested|
 |:white_check_mark: Fast responses |:x: Not shared between platforms|
 |:white_check_mark: Static mock going as part of application ||
+|:white_check_mark: Can be executed anywhere ||
 
 
 ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Intermediate)
 
-![w:900 center](images/call-3.svg)
-
----
-
-# ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Intermediate)
-
-|Pros|Cons|
-|---|---|
-|:white_check_mark: Required extra affort to implement |:x: HTTP Stack still not tested|
-|:white_check_mark: Fast responses |:x: Code still not shared between platforms|
-|:white_check_mark: Each test having custom mocks ||
-|:white_check_mark: Custom Rules!!! ||
+* Custom ```TestRule```'s for custom behaviours
+  * Response codes
+  * Throttling
+  * Responses alligned with Test Suits requrements
 ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Advanced)
@@ -457,20 +464,14 @@ Type of mocks
 
 |Pros|Cons|
 |---|---|
-|:white_check_mark: HTTP Stack still not tested ||
-|:white_check_mark: Code still not shared between platform ||
-|:white_check_mark: Required extra affort to implement |:x: HTTP Stack still not tested|
-|:white_check_mark: Fast responses |:x: Code still not shared between platforms|
-|:white_check_mark: Each test having custom mocks ||
+|:white_check_mark: HTTP Stack tested |:x:  Required extra affort to implement|
+|:white_check_mark: Mocks responses in-app |:x: Unsynchronized with "Production server"|
+|:white_check_mark: Good for Features test|:x: Bad for Integration test|
+|:white_check_mark: Can be run as "Remote server" ||
+|:white_check_mark: Customizable behaviours ||
 
----
 
-# Agenda for today
 
-- ![1](https://icongr.am/material/numeric-1-circle.svg?color=ff9900) Dive into UI testing 
-- ![2](https://icongr.am/material/numeric-2-circle.svg?color=ff9900) Native Android UI Testing
-- ![3](https://icongr.am/material/numeric-3-circle.svg?color=ff9900) Mocks
-- ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
 ---
 
 <!-- _class: lead -->

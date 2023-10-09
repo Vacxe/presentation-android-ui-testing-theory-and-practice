@@ -1,0 +1,29 @@
+sequenceDiagram
+    Application->>+OkHttp: GET: *.au/myEndpoint   
+    OkHttp->>Remote Server: GET: *.au/myEndpoint
+    Note right of Remote Server: if(GET: *.au/myEndpoint) -> <br> Return "myEndpoint.json" 
+    Remote Server->>+OkHttp: Response { success: true } (100ms)
+    OkHttp->>Application: Response { success: true }
+
+sequenceDiagram
+    Application->>+OkHttp: GET: *.au/myEndpoint   
+    OkHttp->>Remote Server: GET: *.au/myEndpoint
+    Note right of Remote Server: if(GET: *.au/myEndpoint) -> <br> Return "myEndpoint.json" 
+    Remote Server->>+OkHttp: Response { success: true } (100ms)
+    OkHttp->>Application: Response { success: true }
+
+sequenceDiagram
+    Application->>+OkHttp: GET: /myEndpoint   
+    OkHttp->>Interceptor: GET: /myEndpoint
+    Interceptor->>Interceptor: if(GET: /myEndpoint) 
+    Interceptor->>+OkHttp: Response { success: true } (100ms)
+    OkHttp->>-Application: Response { success: true }
+
+sequenceDiagram
+    Application->>+OkHttp: GET: *.au/myEndpoint   
+    OkHttp->>Interceptor: GET: *.au/myEndpoint
+    Interceptor->>+In-App Mock Server: GET: localhost/myEndpoint <br> @TestCase("testSuccess") -> +Header "testcase: testSuccess" <br> @Throttle(100) -> +Header "throttle: 100"  
+    Note right of In-App Mock Server: if(GET: myEndpoint && testcase == testSuccess) -> <br> Return "assets/responses/myEndpointSuccess.json" 
+    In-App Mock Server->>+Interceptor: Response { success: true } <br> Response time 100ms 
+    Interceptor->>+OkHttp: Response { success: true }
+    OkHttp->>Application: Response { success: true }
