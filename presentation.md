@@ -130,7 +130,7 @@ Software testing pyramid
 
 <!-- _class: lead -->
 
-![1 w:256 h:256](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
+![2 w:256 h:256](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
 
 # Native Android UI Testing
 
