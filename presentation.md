@@ -421,8 +421,8 @@ onScreen<FeatureAScreen> {
 |---|---|
 |:white_check_mark: Testing whole HTTP stack|:x: Extra time for request-response processing|
 |:white_check_mark: Single remote instance |:x: Required redeploy in case of mock updates|
-|:white_check_mark: Stable results for UI testing |:x: Required redeploy in case of mock updates|
-|:white_check_mark: Stateless |:x: Not supporting custom error codes|
+|:white_check_mark: Stable results for UI testing |:x: Not supporting custom error codes|
+|:white_check_mark: Stateless ||
 
 
 ---
