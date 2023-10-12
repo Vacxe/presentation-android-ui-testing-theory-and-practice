@@ -61,10 +61,10 @@ Software testing pyramid
 
 # ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) Why do we need tests?
 
-  * Confidence (Dont repeat your mistakes)
+  * Confidence (Don't repeat your mistakes)
   * Continuous deployment 
   * Screenshots generation
-  * Application assessement speed up
+  * Application assessment speed up
 
 ---
 
@@ -73,9 +73,9 @@ Software testing pyramid
 ![w:1200 center](images/feature-development-process.svg)
 
 * Discussion of functionality
-* Discussion of assessement criteria
-* Feature implimentation
-* Unit and UI tests implimentation
+* Discussion of assessment criteria
+* Feature implementation
+* Unit and UI tests implementation
 * Validation by QA
 
 ---
@@ -87,7 +87,7 @@ Software testing pyramid
 
 ---
 
-# ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) Assesement creterias
+# ![1](https://icongr.am/material/numeric-1-circle.svg?color=666666) Assessment criteria
 
 * Loading
 * Empty
@@ -108,8 +108,8 @@ Software testing pyramid
   - scenario:
   Open Feature A screen
   Wait for Content
-  Verify that Loading is not dispalyed  
-  Verify that Error is not dispalyed
+  Verify that Loading is not displayed  
+  Verify that Error is not displayed
   Verify that 3 items displayed in list
   Verify 1 item title is equals "Test title 1"  
   Verify 2 item title is equals "Test title 2"  
@@ -187,8 +187,8 @@ img[alt~="center"] {
 
 |Pros|Cons|
 |---|---|
-|:white_check_mark: Testing for ADB calls such as SMS, Calls, Geolocation and etc|:x: Requred ADB server|
-|:white_check_mark: Build-in flakiness retries|:x: Tricky for scaling|
+|:white_check_mark: Testing for ADB calls such as SMS, Calls, Geolocation etc|:x: Requires ADB server|
+|:white_check_mark: Built-in flakiness retries|:x: Tricky for scaling|
 |:white_check_mark: Allure report|:x: Parallel runs on CI|
 |:white_check_mark: Steps support||
 |:white_check_mark: Based on Kakao||
@@ -309,15 +309,15 @@ class ExampleInstrumentedTest {
 # ![2](https://icongr.am/material/numeric-2-circle.svg?color=666666) Quick refresh ...
 
 
-`.../featureA/assesement.yaml`
+`.../featureA/assessment.yaml`
 ```yaml
 - case: 
   - id: featureAContentIsDisplayed
   - scenario:
   Open Feature A screen
   Wait for Content
-  Verify that Loading is not dispalyed  
-  Verify that Error is not dispalyed
+  Verify that Loading is not displayed  
+  Verify that Error is not displayed
   Verify that 3 items displayed in list
   Verify 1 item title is equals "Test title 1"  
   Verify 2 item title is equals "Test title 2"  
@@ -350,11 +350,11 @@ onScreen<FeatureAScreen> {
 
 |Kakao|Marathon|
 |---|---|
-|:white_check_mark: Nice and simple DSL |:white_check_mark: Flakiness controll strategies|
+|:white_check_mark: Nice and simple DSL |:white_check_mark: Flakiness control strategies|
 |:white_check_mark: Typed page objects |:white_check_mark: Easy to scale|
 |:white_check_mark: Recycler support|:white_check_mark: Can be integrated with CI|
 |:white_check_mark: Compat API support|:white_check_mark: Supports custom configurations for your needs|
-|:white_check_mark: Lots of Matcher and Assetions|:white_check_mark: Allure reporting|
+|:white_check_mark: Lots of Matcher and Assertions|:white_check_mark: Allure reporting|
 
 ---
 
@@ -382,7 +382,7 @@ onScreen<FeatureAScreen> {
   * Feature
   * Integration
 * Why do we need mocks?
-  * Performace improvement
+  * Performance improvement
   * Tests results stability
   * Control for 3rd party code
 
@@ -450,7 +450,7 @@ onScreen<FeatureAScreen> {
 * Custom ```TestRule```'s for custom behaviours
   * Response codes
   * Throttling
-  * Responses alligned with Test Suits requrements
+  * Responses aligned with Test Suits requirements
 ---
 
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Local Mocks (Advanced)
@@ -464,7 +464,7 @@ onScreen<FeatureAScreen> {
 
 |Pros|Cons|
 |---|---|
-|:white_check_mark: HTTP Stack tested |:x:  Required extra affort to implement|
+|:white_check_mark: HTTP Stack tested |:x:  Requires extra effort to implement|
 |:white_check_mark: Mocks responses in-app |:x: Unsynchronized with "Production server"|
 |:white_check_mark: Good for Features test|:x: Bad for Integration test|
 |:white_check_mark: Can be run as "Remote server" ||
@@ -494,8 +494,8 @@ onScreen<FeatureAScreen> {
 
 # ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
 
-* Always undestand what you want to test
-* Choose a right tooling set
-* Ask yourself "How this code will change in 3 years"
+* Always understand what you want to test
+* Choose the right tooling set
+* Ask yourself "How will this code change in 3 years"
 * Think about scaling
 * Questions?
