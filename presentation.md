@@ -38,6 +38,14 @@ style: |
 
 <!-- _class: lead -->
 
+![1 w:256 h:256](https://icongr.am/material/comment-question-outline.svg?color=ff9900)
+
+# How many UI tests do you have in your project?
+
+---
+
+<!-- _class: lead -->
+
 ![1 w:256 h:256](https://icongr.am/material/numeric-1-circle.svg?color=ff9900)
 
 # Dive into UI testing 
@@ -133,6 +141,14 @@ Software testing pyramid
 ![2 w:256 h:256](https://icongr.am/material/numeric-2-circle.svg?color=ff9900)
 
 # Native Android UI Testing
+
+---
+
+<!-- _class: lead -->
+
+![1 w:256 h:256](https://icongr.am/material/comment-question-outline.svg?color=ff9900)
+
+# What framework are you using for UI testing??
 
 ---
 
@@ -373,6 +389,15 @@ onScreen<FeatureAScreen> {
 ![2 w:256 h:256](https://icongr.am/material/numeric-3-circle.svg?color=ff9900)
 
 # Mocks
+
+---
+
+<!-- _class: lead -->
+
+![1 w:256 h:256](https://icongr.am/material/comment-question-outline.svg?color=ff9900)
+
+# Do you have mocks for UI testing?
+# How flaky are your tests?
 
 ---
 
