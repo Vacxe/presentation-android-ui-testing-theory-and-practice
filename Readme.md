@@ -148,7 +148,7 @@ Software testing pyramid
 
 ![1 w:256 h:256](https://icongr.am/material/comment-question-outline.svg?color=ff9900)
 
-# What framework are you using for UI testing??
+# What framework are you using for UI testing?
 
 ---
 
@@ -440,6 +440,7 @@ onScreen<FeatureAScreen> {
 
 
 ---
+
 # ![3](https://icongr.am/material/numeric-3-circle.svg?color=666666) Testing with remote server (Mocks)
 
 |Pros|Cons|
@@ -515,7 +516,6 @@ onScreen<FeatureAScreen> {
 # Conclusion
 
 ---
-
 
 # ![4](https://icongr.am/material/numeric-4-circle.svg?color=666666) Conclusion
 
